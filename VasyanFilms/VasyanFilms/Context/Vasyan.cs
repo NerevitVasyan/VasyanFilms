@@ -11,6 +11,7 @@ namespace VasyanFilms
         {
         }
 
+
         virtual public DbSet<Genre> Genres { get; set; }
         virtual public DbSet<Actor> Actors { get; set; }
         virtual public DbSet<Film> Films { get; set; }
