@@ -23,10 +23,28 @@ namespace VasyanFilms
         public MainWindow()
         {
             InitializeComponent();
-            //Vasyan db = new Vasyan();
-            //Genre g = new Genre() { NameGenre = "Horror" };
+            Vasyan db = new Vasyan();
+            //Genre g = new Genre() { NameGenre = "Adventure" };
             //db.Genres.Add(g);
-            //db.SaveChanges();
+
+            Film f = new Film()
+            {
+                Genre = db.Genres.FirstOrDefault(x => x.NameGenre == "Horror"),
+                Year = 2017,
+                Name = "It",
+                Score = 85,
+            };
+
+            Actor a1 = new Actor() { NameActor = "Bill Skarsgard", Age = 28 };
+            Actor a2 = new Actor() { NameActor = "Finn Wolfhard", Age = 15 };
+
+            f.Actors.Add(a1);
+            f.Actors.Add(a2);
+
+            //a1.Films.Add(f);
+            //a2.Films.Add(f);
+
+            db.SaveChanges();
         }
     }
 }
