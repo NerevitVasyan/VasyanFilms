@@ -16,7 +16,6 @@ namespace VasyanFilms
 
         public int ID { get; set; }
         public string NameActor { get; set; }
-        public int Age { get; set; }
 
         //navigation
         virtual public List<Film> Films { get; set; }
