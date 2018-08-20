@@ -23,6 +23,10 @@ namespace VasyanFilms
         public MainWindow()
         {
             InitializeComponent();
+            //Vasyan db = new Vasyan();
+            //Genre g = new Genre() { NameGenre = "Horror" };
+            //db.Genres.Add(g);
+            //db.SaveChanges();
         }
     }
 }

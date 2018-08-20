@@ -1,4 +1,4 @@
-namespace VasyanFilms.Context
+namespace VasyanFilms
 {
     using System;
     using System.Data.Entity;
@@ -10,6 +10,10 @@ namespace VasyanFilms.Context
             : base("name=VasyanString")  // connection string
         {
         }
+
+        virtual public DbSet<Genre> Genres { get; set; }
+        virtual public DbSet<Actor> Actors { get; set; }
+        virtual public DbSet<Film> Films { get; set; }
 
     }
 }
